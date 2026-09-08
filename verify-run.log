@@ -1,0 +1,33 @@
+{
+  "historicalDependenciesVerified": 6,
+  "upstreamBlobsVerified": 5,
+  "predicateChecks": 45,
+  "parserChecks": 18,
+  "snapshots": [
+    {
+      "file": "v5.0.0-MediaController.txt",
+      "sha256": "1684f0f9a8e997f15d00867cd670b369ff2548dac1c3f40bb86c8b5bc450cd67"
+    },
+    {
+      "file": "v5.0.0-LangMatcher.txt",
+      "sha256": "455542bc66784d2f5f3273a7449d9b338a81aba9cf6a254e2ff04005506041a7"
+    },
+    {
+      "file": "v5.2.0-MediaController.txt",
+      "sha256": "e997fc32b3f4d412c46c8090a1d9a85c1ab79508ecb70c3abcab4fe8a4054a45"
+    },
+    {
+      "file": "v5.2.0-LangMatcher.txt",
+      "sha256": "47ed66c35ec215fb6d5fbe03105af962c259bbc532e9168ff427e69762a02899"
+    },
+    {
+      "file": "pr-5120-MediaController.txt",
+      "sha256": "8ad63c406842e03098faec4e5e7026d5f11db49cdefb1338b867f441acfca5f6"
+    },
+    {
+      "file": "pr-5120-LangMatcher.txt",
+      "sha256": "47ed66c35ec215fb6d5fbe03105af962c259bbc532e9168ff427e69762a02899"
+    }
+  ],
+  "scope": "Source-extracted language predicates and parser converters, not whole-player integration tests"
+}

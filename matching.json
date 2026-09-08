@@ -1,0 +1,287 @@
+[
+  {
+    "preference": "en-US",
+    "rawTrack": "en-US",
+    "legacy": {
+      "track": "en",
+      "range": "en",
+      "matches": true
+    },
+    "baseline": {
+      "track": "en-US",
+      "range": "en-US",
+      "matches": true
+    },
+    "proposed": {
+      "track": "en-US",
+      "range": "en-US",
+      "matches": true
+    }
+  },
+  {
+    "preference": "en-US",
+    "rawTrack": "en",
+    "legacy": {
+      "track": "en",
+      "range": "en",
+      "matches": true
+    },
+    "baseline": {
+      "track": "en",
+      "range": "en-US",
+      "matches": false
+    },
+    "proposed": {
+      "track": "en",
+      "range": "en-US",
+      "matches": false
+    }
+  },
+  {
+    "preference": "en-US",
+    "rawTrack": "eng",
+    "legacy": {
+      "track": "en",
+      "range": "en",
+      "matches": true
+    },
+    "baseline": {
+      "track": "en",
+      "range": "en-US",
+      "matches": false
+    },
+    "proposed": {
+      "track": "en",
+      "range": "en-US",
+      "matches": false
+    }
+  },
+  {
+    "preference": "en-US",
+    "rawTrack": "en-GB",
+    "legacy": {
+      "track": "en-GB",
+      "range": "en",
+      "matches": true
+    },
+    "baseline": {
+      "track": "en-GB",
+      "range": "en-US",
+      "matches": false
+    },
+    "proposed": {
+      "track": "en-GB",
+      "range": "en-US",
+      "matches": false
+    }
+  },
+  {
+    "preference": "en-GB",
+    "rawTrack": "en",
+    "legacy": {
+      "track": "en",
+      "range": "en-GB",
+      "matches": false
+    },
+    "baseline": {
+      "track": "en",
+      "range": "en-GB",
+      "matches": false
+    },
+    "proposed": {
+      "track": "en",
+      "range": "en-GB",
+      "matches": false
+    }
+  },
+  {
+    "preference": "en",
+    "rawTrack": "en-GB",
+    "legacy": {
+      "track": "en-GB",
+      "range": "en",
+      "matches": true
+    },
+    "baseline": {
+      "track": "en-GB",
+      "range": "en",
+      "matches": true
+    },
+    "proposed": {
+      "track": "en-GB",
+      "range": "en",
+      "matches": true
+    }
+  },
+  {
+    "preference": "nl-NL",
+    "rawTrack": "nl-BE",
+    "legacy": {
+      "track": "nl-BE",
+      "range": "nl",
+      "matches": true
+    },
+    "baseline": {
+      "track": "nl-BE",
+      "range": "nl-NL",
+      "matches": false
+    },
+    "proposed": {
+      "track": "nl-BE",
+      "range": "nl",
+      "matches": true
+    }
+  },
+  {
+    "preference": "nl-NL",
+    "rawTrack": "nl",
+    "legacy": {
+      "track": "nl",
+      "range": "nl",
+      "matches": true
+    },
+    "baseline": {
+      "track": "nl",
+      "range": "nl-NL",
+      "matches": false
+    },
+    "proposed": {
+      "track": "nl",
+      "range": "nl",
+      "matches": true
+    }
+  },
+  {
+    "preference": "zh-Hant",
+    "rawTrack": "zh-TW",
+    "legacy": {
+      "track": "zh-TW",
+      "range": "zh-TW",
+      "matches": true
+    },
+    "baseline": {
+      "track": "zh-TW",
+      "range": "zh-Hant",
+      "matches": false
+    },
+    "proposed": {
+      "track": "zh-TW",
+      "range": "zh-Hant",
+      "matches": false
+    }
+  },
+  {
+    "preference": "zh-Hant",
+    "rawTrack": "zh-Hant-HK",
+    "legacy": {
+      "track": "zh-HK",
+      "range": "zh-TW",
+      "matches": false
+    },
+    "baseline": {
+      "track": "zh-Hant-HK",
+      "range": "zh-Hant",
+      "matches": true
+    },
+    "proposed": {
+      "track": "zh-Hant-HK",
+      "range": "zh-Hant",
+      "matches": true
+    }
+  },
+  {
+    "preference": "zh-Hans",
+    "rawTrack": "zh-CN",
+    "legacy": {
+      "track": "zh",
+      "range": "zh",
+      "matches": true
+    },
+    "baseline": {
+      "track": "zh-CN",
+      "range": "zh-Hans",
+      "matches": false
+    },
+    "proposed": {
+      "track": "zh-CN",
+      "range": "zh-Hans",
+      "matches": false
+    }
+  },
+  {
+    "preference": "sr-Cyrl",
+    "rawTrack": "sr",
+    "legacy": {
+      "track": "sr",
+      "range": "sr",
+      "matches": true
+    },
+    "baseline": {
+      "track": "sr",
+      "range": "sr-Cyrl",
+      "matches": false
+    },
+    "proposed": {
+      "track": "sr",
+      "range": "sr-Cyrl",
+      "matches": false
+    }
+  },
+  {
+    "preference": "iw",
+    "rawTrack": "he",
+    "legacy": {
+      "track": "he",
+      "range": "he",
+      "matches": true
+    },
+    "baseline": {
+      "track": "he",
+      "range": "iw",
+      "matches": false
+    },
+    "proposed": {
+      "track": "he",
+      "range": "iw",
+      "matches": false
+    }
+  },
+  {
+    "preference": "tgl",
+    "rawTrack": "fil",
+    "legacy": {
+      "track": "fil",
+      "range": "fil",
+      "matches": true
+    },
+    "baseline": {
+      "track": "fil",
+      "range": "tl",
+      "matches": false
+    },
+    "proposed": {
+      "track": "fil",
+      "range": "tl",
+      "matches": false
+    }
+  },
+  {
+    "preference": "und",
+    "rawTrack": "en",
+    "legacy": {
+      "track": "en",
+      "range": "en",
+      "matches": true
+    },
+    "baseline": {
+      "track": "en",
+      "range": "und",
+      "matches": false
+    },
+    "proposed": {
+      "track": "en",
+      "range": "und",
+      "matches": false
+    }
+  }
+]

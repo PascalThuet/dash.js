@@ -1,0 +1,212 @@
+{
+  "auditDate": "2026-09-09",
+  "runtime": "v20.20.2",
+  "refs": {
+    "dash500": "4d23d75e9e9096666afb2c80557d8ccbe1a20cc9",
+    "dash520": "4a2d7a93782e544999734410166101a68f8ba079",
+    "baseline": "cb2640d0a77608f9f438044668947222bc6c2fef",
+    "pr5120": "87670d1bcf3a6c4b83bb43cee9e7f87662364b93",
+    "upstreamTag": "wooorm/bcp-47-normalize@2.3.0"
+  },
+  "versions": {
+    "bcp-47-normalize": "2.3.0",
+    "bcp-47-match": "2.0.3",
+    "bcp-47": "2.1.0",
+    "is-alphabetical": "2.0.1",
+    "is-alphanumerical": "2.0.1",
+    "is-decimal": "2.0.1"
+  },
+  "tables": {
+    "matches": 462,
+    "fields": 320,
+    "likely": 8034,
+    "parserNormal": 26,
+    "ambiguousRegions": 23,
+    "iso639": 202
+  },
+  "overall": {
+    "inputs": 32390,
+    "baselineDifferences": 23904,
+    "proposedDifferences": 23896,
+    "baselineCaseOnly": 15,
+    "fixedByPR": 8,
+    "introducedByPR": 0
+  },
+  "parserAccepted": {
+    "inputs": 32373,
+    "baselineDifferences": 23888,
+    "proposedDifferences": 23880,
+    "baselineCaseOnly": 15,
+    "fixedByPR": 8,
+    "introducedByPR": 0
+  },
+  "perFamily": {
+    "ambiguous-regions": {
+      "inputs": 23,
+      "baselineDifferences": 0,
+      "proposedDifferences": 0,
+      "baselineCaseOnly": 0,
+      "fixedByPR": 0,
+      "introducedByPR": 0
+    },
+    "case-probes": {
+      "inputs": 297,
+      "baselineDifferences": 85,
+      "proposedDifferences": 82,
+      "baselineCaseOnly": 10,
+      "fixedByPR": 3,
+      "introducedByPR": 0
+    },
+    "fields": {
+      "inputs": 640,
+      "baselineDifferences": 640,
+      "proposedDifferences": 640,
+      "baselineCaseOnly": 0,
+      "fixedByPR": 0,
+      "introducedByPR": 0
+    },
+    "iso-639": {
+      "inputs": 202,
+      "baselineDifferences": 2,
+      "proposedDifferences": 2,
+      "baselineCaseOnly": 0,
+      "fixedByPR": 0,
+      "introducedByPR": 0
+    },
+    "likely": {
+      "inputs": 30389,
+      "baselineDifferences": 22598,
+      "proposedDifferences": 22597,
+      "baselineCaseOnly": 0,
+      "fixedByPR": 1,
+      "introducedByPR": 0
+    },
+    "matches": {
+      "inputs": 1293,
+      "baselineDifferences": 529,
+      "proposedDifferences": 528,
+      "baselineCaseOnly": 0,
+      "fixedByPR": 1,
+      "introducedByPR": 0
+    },
+    "parser-normal": {
+      "inputs": 26,
+      "baselineDifferences": 21,
+      "proposedDifferences": 21,
+      "baselineCaseOnly": 0,
+      "fixedByPR": 0,
+      "introducedByPR": 0
+    },
+    "selected-examples": {
+      "inputs": 80,
+      "baselineDifferences": 64,
+      "proposedDifferences": 59,
+      "baselineCaseOnly": 4,
+      "fixedByPR": 5,
+      "introducedByPR": 0
+    },
+    "upstream-examples": {
+      "inputs": 28,
+      "baselineDifferences": 22,
+      "proposedDifferences": 21,
+      "baselineCaseOnly": 0,
+      "fixedByPR": 1,
+      "introducedByPR": 0
+    },
+    "upstream-fixtures": {
+      "inputs": 89,
+      "baselineDifferences": 57,
+      "proposedDifferences": 57,
+      "baselineCaseOnly": 1,
+      "fixedByPR": 0,
+      "introducedByPR": 0
+    }
+  },
+  "directRuleProbes": {
+    "matches": {
+      "inputs": 462,
+      "baselineDifferences": 262,
+      "proposedDifferences": 261,
+      "baselineCaseOnly": 0,
+      "fixedByPR": 1,
+      "introducedByPR": 0
+    },
+    "fieldsQaa": {
+      "inputs": 320,
+      "baselineDifferences": 320,
+      "proposedDifferences": 320,
+      "baselineCaseOnly": 0,
+      "fixedByPR": 0,
+      "introducedByPR": 0
+    },
+    "parserNormal": {
+      "inputs": 26,
+      "baselineDifferences": 21,
+      "proposedDifferences": 21,
+      "baselineCaseOnly": 0,
+      "fixedByPR": 0,
+      "introducedByPR": 0
+    }
+  },
+  "upstreamFixturesPassed": 89,
+  "v520VsBaselineDifferences": 0,
+  "isoDifferences": [
+    {
+      "input": "tgl",
+      "families": [
+        "iso-639",
+        "matches",
+        "selected-examples"
+      ],
+      "legacy": "fil",
+      "v520": "tl",
+      "baseline": "tl",
+      "proposed": "tl",
+      "parserAccepts": true,
+      "baselineDiffers": true,
+      "proposedDiffers": true,
+      "caseOnlyBaseline": false,
+      "warnings": []
+    },
+    {
+      "input": "twi",
+      "families": [
+        "iso-639",
+        "matches",
+        "selected-examples"
+      ],
+      "legacy": "ak",
+      "v520": "tw",
+      "baseline": "tw",
+      "proposed": "tw",
+      "parserAccepts": true,
+      "baselineDiffers": true,
+      "proposedDiffers": true,
+      "caseOnlyBaseline": false,
+      "warnings": []
+    }
+  ],
+  "fixedInputs": [
+    "NL-NL",
+    "NLD-NL",
+    "NLD-nl",
+    "ZH-CMN",
+    "nl-NL",
+    "nl-nl",
+    "zh-CMN",
+    "zh-cmn"
+  ],
+  "sha256": {
+    "before-pr-5120.mjs": "78e18839e99a6b48e9b4b9c2edd3b67a74285d724bd1f5dbe3073c690e0f792a",
+    "pr-5120.mjs": "96685168b15cc1244a9b366f4542bec37b568c21d5ede110039245a8e99d14d2",
+    "v5.2.0.mjs": "78e18839e99a6b48e9b4b9c2edd3b67a74285d724bd1f5dbe3073c690e0f792a",
+    "upstream-test.js": "67212448904bd79d43bf99b1fb3b60671d532a1499076659791b5653198f9c1c",
+    "node_modules/bcp-47-normalize/lib/index.js": "74da3c8d3991e1916eab48cf68a3bc8e6f7763782deb796e646906ad158d6063",
+    "node_modules/bcp-47-normalize/lib/matches.js": "77c5ab0f0e2d8f6df9244700bc1a141826880a5235753c298b3c8ddfad5cebbc",
+    "node_modules/bcp-47-normalize/lib/fields.js": "a2217326c017c0c9c230c2ade17516de87a40ce143f0d1ce67dcfe0f87aaf05a",
+    "node_modules/bcp-47-normalize/lib/likely.js": "820f6c78d107304a1972a9f16c02b92b3bd29db0c894c1f82244bd35f111a44b",
+    "node_modules/bcp-47-normalize/lib/many.js": "a83e21081ad16694d6ed57df735456bce5409136841083c11e03f8af9a5f194b",
+    "node_modules/bcp-47/lib/parse.js": "fb6ca68aef0e27d76e64fc0177f993a130c975f00d166338555f69bc985edd99",
+    "node_modules/bcp-47/lib/normal.js": "52765f14a7e153a06daf616af6341d3e84dc739fbc722f89f89f4eac814f2d53"
+  }
+}

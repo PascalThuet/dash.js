@@ -1,0 +1,98 @@
+[
+  {
+    "input": "undefined",
+    "type": "undefined",
+    "legacy": {
+      "value": "",
+      "type": "string"
+    },
+    "baseline": {
+      "value": "undefined",
+      "type": "undefined"
+    },
+    "proposed": {
+      "value": "undefined",
+      "type": "undefined"
+    }
+  },
+  {
+    "input": "null",
+    "type": "object",
+    "legacy": {
+      "value": "",
+      "type": "string"
+    },
+    "baseline": {
+      "value": "null",
+      "type": "object"
+    },
+    "proposed": {
+      "value": "null",
+      "type": "object"
+    }
+  },
+  {
+    "input": "false",
+    "type": "boolean",
+    "legacy": {
+      "value": "",
+      "type": "string"
+    },
+    "baseline": {
+      "value": "false",
+      "type": "boolean"
+    },
+    "proposed": {
+      "value": "false",
+      "type": "boolean"
+    }
+  },
+  {
+    "input": "0",
+    "type": "number",
+    "legacy": {
+      "value": "",
+      "type": "string"
+    },
+    "baseline": {
+      "value": "0",
+      "type": "number"
+    },
+    "proposed": {
+      "value": "0",
+      "type": "number"
+    }
+  },
+  {
+    "input": "123",
+    "type": "number",
+    "legacy": {
+      "value": "",
+      "type": "string"
+    },
+    "baseline": {
+      "value": "123",
+      "type": "number"
+    },
+    "proposed": {
+      "value": "123",
+      "type": "number"
+    }
+  },
+  {
+    "input": "true",
+    "type": "boolean",
+    "legacy": {
+      "value": "true",
+      "type": "string"
+    },
+    "baseline": {
+      "value": "true",
+      "type": "boolean"
+    },
+    "proposed": {
+      "value": "true",
+      "type": "boolean"
+    }
+  }
+]

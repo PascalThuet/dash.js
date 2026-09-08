@@ -1,0 +1,18 @@
+{
+  "name": "dashjs-5090-normalization-audit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "audit": "node audit.mjs",
+    "verify": "node verify.mjs",
+    "test": "node --test upstream-test.js"
+  },
+  "dependencies": {
+    "bcp-47-normalize": "2.3.0",
+    "bcp-47": "2.1.0",
+    "bcp-47-match": "2.0.3",
+    "is-alphabetical": "2.0.1",
+    "is-alphanumerical": "2.0.1",
+    "is-decimal": "2.0.1"
+  }
+}
