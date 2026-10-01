@@ -77,6 +77,9 @@ function AbrControllerMock () {
         return this.elementHeight;
     };
 
+    this.registerStreamType = function (/*type, streamProcessor*/) {
+    };
+
     this.unRegisterStreamType = function (/*type*/) {
     };
 

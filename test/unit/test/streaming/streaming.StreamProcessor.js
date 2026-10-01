@@ -4,7 +4,6 @@ import MediaPlayerEvents from '../../../../src/streaming/MediaPlayerEvents.js';
 import EventBus from '../../../../src/core/EventBus.js';
 import Settings from '../../../../src/core/Settings.js';
 import BoxParser from '../../../../src/streaming/utils/BoxParser.js';
-import DashConstants from '../../../../src/dash/constants/DashConstants.js';
 import AbrControllerMock from '../../mocks/AbrControllerMock.js';
 import AdapterMock from '../../mocks/AdapterMock.js';
 import CapabilitiesMock from '../../mocks/CapabilitiesMock.js';
@@ -63,20 +62,13 @@ describe('StreamProcessor', function () {
     describe('Scheduling while a quality switch is being prepared', function () {
         const testType = 'video';
 
-        // Held open so the quality switch stays mid-preparation for the duration of the test,
+        // When held, the sidx load never completes and the quality switch stays mid-preparation,
         // which is what a slow SegmentBase sidx load looks like on a constrained device.
-        let resolvePendingSegmentList;
+        let holdSegmentList;
 
         const segmentBaseControllerMock = {
-            getSegmentBaseInitSegment: function () {
-                return Promise.resolve();
-            },
             getSegmentList: function () {
-                return new Promise(function (resolve) {
-                    resolvePendingSegmentList = function () {
-                        resolve({ segments: [] });
-                    };
-                });
+                return holdSegmentList ? new Promise(function () {}) : Promise.resolve({ segments: [] });
             }
         };
 
@@ -85,29 +77,15 @@ describe('StreamProcessor', function () {
         let startScheduleTimerCalls;
         let representations;
 
-        function createSegmentBaseRepresentation(index) {
-            const representation = voHelper.createRepresentation(testType, index);
-            representation.segmentInfoType = DashConstants.SEGMENT_BASE;
-            representation.segments = null;
-            return representation;
-        }
-
         beforeEach(function () {
-            resolvePendingSegmentList = null;
-            representations = [createSegmentBaseRepresentation(0), createSegmentBaseRepresentation(1)];
+            holdSegmentList = false;
+            representations = [0, 1].map((index) => voHelper.createSegmentBaseRepresentation(testType, index));
 
             streamProcessor = StreamProcessor(context).create({
                 type: testType,
                 mimeType: 'video/mp4',
                 streamInfo: { id: 'streamId', manifestInfo: { isDynamic: false }, duration: 100 },
-                abrController: Object.assign(new AbrControllerMock(), {
-                    registerStreamType: function () {
-                    },
-                    unRegisterStreamType: function () {
-                    },
-                    setPlaybackQuality: function () {
-                    }
-                }),
+                abrController: new AbrControllerMock(),
                 adapter: new AdapterMock(),
                 baseURLController: objectsHelper.getDummyBaseURLController(),
                 boxParser: BoxParser(context).getInstance(),
@@ -135,12 +113,7 @@ describe('StreamProcessor', function () {
 
             // Seed the RepresentationController the way startup would, with representation 0
             // selected and its segment list resolved.
-            const representationController = streamProcessor.getRepresentationController();
-            const updated = representationController.updateData(representations, true, representations[0].id);
-            if (resolvePendingSegmentList) {
-                resolvePendingSegmentList();
-            }
-            return updated;
+            return streamProcessor.getRepresentationController().updateData(representations, true, representations[0].id);
         });
 
         afterEach(function () {
@@ -151,12 +124,11 @@ describe('StreamProcessor', function () {
         it('should not restart scheduling when an earlier fragment finishes appending while the switch is still being prepared', function () {
             // Switch to a representation whose segment list still has to be loaded. The mock
             // leaves that load pending, so preparation cannot complete.
+            holdSegmentList = true;
             streamProcessor.prepareQualityChange({
                 newRepresentation: representations[1],
                 oldRepresentation: representations[0]
             });
-
-            startScheduleTimerCalls = 0;
 
             // A fragment that was already in flight finishes appending.
             eventBus.trigger(Events.BYTES_APPENDED_END_FRAGMENT, {
